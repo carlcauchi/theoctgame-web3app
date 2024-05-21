@@ -4,12 +4,13 @@ metadata:
   name: web3app
   labels:
     app: web3app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   selector:
     app: web3app
-
   ports:
     - port: 80
       targetPort: 3000
-
+      protocol: TCP
   type: LoadBalancer
