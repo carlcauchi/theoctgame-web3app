@@ -53,8 +53,9 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}        
         IMAGE_TAG: ${{ steps.commit.outputs.short }}
       run: |
-        kubectl get pods --all-namespaces
-        sed -i.bak "s|DOCKER_IMAGE|$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG|g" manifests/web3app-deployment.yaml
-        cat manifests/web3app-deployment.yaml
+        sed -i.bak "s|DOCKER_IMAGE|$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG|g" manifests/web3app-deployment.yaml && \
         kubectl apply -f manifests/web3app-deployment.yaml
         kubectl apply -f manifests/web3app-service.yaml
+        cat manifests/web3app-deployment.yaml
+        kubectl get pods --namespace=default
+        kubectl get svc --namespace=default
