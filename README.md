@@ -39,3 +39,5 @@ Refer to the IaC repo: https://github.com/carlcauchi/theoctgame-iac
    In this case the Loadbalancer endpoint would be `http://a77d52bbab87b42098870c136e512066-74bf7299ec4bd5b4.elb.eu-central-1.amazonaws.com`
 
 ![Deployment Process](image.png)
+
+![Application Running](image-1.png)
