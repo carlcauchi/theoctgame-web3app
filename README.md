@@ -37,3 +37,5 @@ Refer to the IaC repo: https://github.com/carlcauchi/theoctgame-iac
 `web3app      LoadBalancer   172.20.217.11   a77d52bbab87b42098870c136e512066-74bf7299ec4bd5b4.elb.eu-central-1.amazonaws.com   80:31221/TCP   107m`
 
    In this case the Loadbalancer endpoint would be `http://a77d52bbab87b42098870c136e512066-74bf7299ec4bd5b4.elb.eu-central-1.amazonaws.com`
+
+![Deployment Process](image.png)
